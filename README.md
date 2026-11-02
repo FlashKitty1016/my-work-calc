@@ -4,6 +4,8 @@
 
 包含重量、密度、随机数和工时工资四个工具。纯前端，无需安装依赖，计算在浏览器本地完成。
 
+在线使用：[my work calc](https://my-work-calc.pages.dev/)
+
 ## 如何使用
 
 下载整个项目，用浏览器打开 `index.html` 即可。请保留旁边的 `assets` 文件夹。
@@ -61,6 +63,20 @@ node scripts/build.cjs
 - 行输出用 Tab 分隔，列输出用换行分隔，可直接粘贴到 Excel。
 - 输入和开关保存在当前浏览器，刷新后可恢复；生成的随机数结果不保存。
 - 浏览器禁止本地存储时仍可计算，只是不保存输入。项目不上传这些输入数据。
+
+## 网站部署在哪里
+
+网站托管在 **Cloudflare Pages**，连接本仓库的 `main` 分支。推送到 `main` 后会自动更新，无需自己租服务器。
+
+- 管理入口：登录 [Cloudflare 控制台](https://dash.cloudflare.com/)，进入 **Workers 和 Pages → my-work-calc**。
+- 项目名称：`my-work-calc`。
+- GitHub 仓库：`FlashKitty1016/my-work-calc`。
+- 生产分支：`main`。
+- 框架预设：无。
+- 构建命令：`exit 0`。
+- 构建输出目录：`.`，直接使用仓库根目录的 `index.html` 和 `assets`。
+
+这里部署的是免费公开静态网页。原来的 `cylinder-calculator-with-density.pages.dev` 属于旧 Pages 项目，新网址使用 `my-work-calc.pages.dev`。
 
 ## 项目结构
 
