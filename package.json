@@ -1,0 +1,9 @@
+{
+  "name": "quickcalc-just-for-work",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build": "node scripts/build.cjs"
+  }
+}
