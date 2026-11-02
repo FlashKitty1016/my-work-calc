@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const output = path.resolve(root, process.argv[2] || 'dist/QuickCalc.html');
+const output = path.resolve(root, process.argv[2] || 'dist/my-work-calc.html');
 let html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 html = html.replace(/  <link rel="stylesheet" href="(assets\/[^"]+)">/g, (_, file) => `  <style>\n${fs.readFileSync(path.join(root, file), 'utf8')}</style>`);
 const scriptPattern = /  <script src="(assets\/[^"]+)" defer><\/script>/g;
